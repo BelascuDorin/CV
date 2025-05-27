@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CV Portfolio
+
+A modern, responsive portfolio website built with Next.js and Tailwind CSS.
+
+## Features
+
+✨ **Clean, Professional Design**
+- Modern gradient background and card-based layout
+- Fully responsive design that works on all devices
+- Dark mode support
+
+📄 **CV Download**
+- Prominent download button for your PDF CV
+- Just add your CV as `public/cv.pdf`
+
+🤖 **AI-Powered Q&A**
+- Interactive prompt where visitors can ask about your experience
+- Smart responses based on your professional background
+- Loading states and user-friendly error handling
 
 ## Getting Started
 
-First, run the development server:
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. **Add your CV:**
+   - Place your PDF CV in the `public/` directory as `cv.pdf`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Customize your experience data:**
+   - Edit the response logic in `app/page.tsx` to include your actual experience
+   - You can connect this to an API or local data for more sophisticated responses
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+5. **Open [http://localhost:3000](http://localhost:3000)** to see your portfolio
 
-## Learn More
+## Customization
 
-To learn more about Next.js, take a look at the following resources:
+- **Personal Info**: Update the hero section text and info cards
+- **Experience Data**: Modify the Q&A logic to reflect your actual background
+- **Styling**: Customize colors and layout in the Tailwind classes
+- **Content**: Add more sections like projects, testimonials, etc.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Deploy easily on Vercel, Netlify, or any platform that supports Next.js.
 
-## Deploy on Vercel
+## Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Next.js 14** - React framework with App Router
+- **Tailwind CSS** - Utility-first CSS framework
+- **TypeScript** - Type safety and better developer experience

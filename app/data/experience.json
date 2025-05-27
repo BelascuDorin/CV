@@ -1,0 +1,203 @@
+{
+  "experience": {
+    "technologies": [
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "Redux",
+      "Braze",
+      "Contentful",
+      "Datadog",
+      "TestCafe",
+      "React Testing Library",
+      "GitHub",
+      "Embedded C",
+      "SCRUM/Agile",
+      "Project Management",
+      "Firebase",
+      "WordPress"
+    ],
+    "currentRole": {
+      "title": "Senior Frontend Engineer",
+      "company": "USA Food Delivery Platform (1M+ users)",
+      "duration": "April 2024 - Present",
+      "type": "Freelance Contractor",
+      "focus": "Subscriptions and consumer messaging",
+      "responsibilities": [
+        "Developing subscription features for 1M+ user platform",
+        "Building consumer messaging systems using React.js and Braze",
+        "Working with modern tools: Contentful, Datadog, TestCafe, React Testing Library",
+        "Collaborating with cross-functional teams in agile environment"
+      ]
+    },
+    "entrepreneurialExperience": [
+      {
+        "name": "nugget.courses",
+        "role": "CTO & Co-Founder",
+        "duration": "February 2023 - December 2023",
+        "location": "Cluj-Napoca",
+        "description": "Educational platform - took over WordPress MVP and rebuilt from scratch",
+        "responsibilities": [
+          "Took over already implemented WordPress MVP",
+          "Involved in every part of the product development",
+          "Implemented v2 of the app from scratch using Next.js and Firebase",
+          "Coordinated other developers in some parts of development"
+        ],
+        "technologies": [
+          "Next.js",
+          "Firebase",
+          "WordPress",
+          "Full-stack development"
+        ]
+      },
+      {
+        "name": "nutrichefdelivery.ro",
+        "duration": "December 2024 - ongoing",
+        "role": "Full-stack Developer & Business Partner",
+        "description": "Complete software development and business partnership for nutrition/meal delivery platform",
+        "technologies": ["React.js", "Node.js", "Full-stack development"]
+      },
+      {
+        "name": "legalmanagement.ro",
+        "role": "CTO & Co-Founder",
+        "description": "Legal management software platform with highly secure architecture designed to prevent access to other clients' data",
+        "technologies": [
+          "Next.js",
+          "Firebase",
+          "Tailwind CSS",
+          "Secure Architecture Design"
+        ]
+      }
+    ],
+    "roles": [
+      {
+        "title": "React Developer",
+        "company": "Fortech",
+        "duration": "April 2021 - March 2024 (3 years)",
+        "type": "Full-time, Remote",
+        "location": "Cluj-Napoca, Romania",
+        "responsibilities": [
+          "Developed new features using Next.js with React.js",
+          "Worked in small agile (SCRUM) teams",
+          "Collaborated with backend teams and clients for optimal frontend solutions",
+          "Managed release processes"
+        ]
+      },
+      {
+        "title": "React Developer",
+        "company": "Real DREAMVILLE",
+        "duration": "October 2021 - May 2022 (8 months)",
+        "type": "Freelance",
+        "responsibilities": [
+          "Rebranded application for solar power loans",
+          "Implemented new features using React.js and Redux",
+          "Worked in small development team (4 members)"
+        ]
+      },
+      {
+        "title": "Software Project Manager",
+        "company": "Marelli",
+        "duration": "September 2020 - April 2021 (8 months)",
+        "type": "Full-time",
+        "location": "Cluj, Romania",
+        "responsibilities": [
+          "Managed resources for automotive software projects",
+          "Coordinated developers, testing teams, and management",
+          "Created tickets and defined project requirements",
+          "Tracked project evolution using Gantt Charts"
+        ]
+      },
+      {
+        "title": "Lead Application Developer",
+        "company": "Marelli",
+        "duration": "February 2020 - August 2020 (7 months)",
+        "type": "Full-time",
+        "responsibilities": [
+          "Led team of 6 developers on embedded C automotive headlamp project",
+          "Managed customer expectations and technical solutions",
+          "Served as Scrum Master and handled project planning"
+        ]
+      },
+      {
+        "title": "Junior Software Developer",
+        "company": "Marelli",
+        "duration": "August 2018 - February 2020 (1 year 7 months)",
+        "responsibilities": [
+          "Developed application software for automotive headlamp systems",
+          "Worked in Agile/Scrum teams",
+          "Mentored team members and contributed to planning"
+        ]
+      },
+      {
+        "title": "Embedded Software Developer",
+        "company": "Hanna Instruments",
+        "duration": "April 2017 - August 2018 (1 year 5 months)",
+        "type": "Part-time",
+        "responsibilities": [
+          "Developed embedded software for measurement instruments",
+          "Worked on turbidity portable meters and similar devices"
+        ]
+      }
+    ],
+    "careerTransition": {
+      "period": "November 2020 - April 2021 (6 months)",
+      "description": "Self-directed learning transition from automotive embedded C to web development",
+      "focus": "React.js and Node.js training projects and tutorials",
+      "github": "https://github.com/BelascuDorin"
+    },
+    "skills": {
+      "frontend": [
+        "React.js",
+        "Next.js",
+        "TypeScript",
+        "Redux",
+        "HTML/CSS",
+        "JavaScript"
+      ],
+      "backend": ["Node.js", "Express", "API development", "Firebase"],
+      "tools": [
+        "Braze",
+        "Contentful",
+        "Datadog",
+        "TestCafe",
+        "React Testing Library",
+        "GitHub",
+        "Git"
+      ],
+      "methodologies": ["Agile/SCRUM", "Project Management", "Team Leadership"],
+      "embedded": ["Embedded C", "Automotive Software", "Hardware Integration"],
+      "databases": ["SQL", "Database design", "Firebase"],
+      "other": [
+        "Release Management",
+        "Mentoring",
+        "Cross-functional Collaboration",
+        "WordPress",
+        "MVP Development"
+      ]
+    },
+    "totalExperience": "8+ years (2017-present)",
+    "specialties": [
+      "Frontend development with React ecosystem",
+      "Large-scale application development (1M+ users)",
+      "Career transition and continuous learning",
+      "Full-stack entrepreneurial projects",
+      "Team leadership and project management",
+      "Embedded systems to web development expertise",
+      "CTO/Technical leadership in startups",
+      "MVP to production-ready application development"
+    ]
+  },
+  "responses": {
+    "technologies": "I work with modern web technologies including React.js, Next.js, TypeScript, Node.js, Firebase, and specialized tools like Braze, Contentful, and Datadog. I also have embedded C background from my automotive experience.",
+    "experience": "I have 8+ years of software development experience, including 4+ years in web development and 4+ years in embedded automotive systems. I've successfully transitioned from embedded C to modern web development and previously served as CTO of an educational platform.",
+    "projects": "I'm currently working on subscription features for a 1M+ user food delivery platform, nutrichefdelivery.ro, and legalmanagement.ro. Previously, as CTO/Co-Founder of nugget.courses (ended December 2023), I rebuilt the entire platform from WordPress to Next.js + Firebase.",
+    "skills": "My skills span frontend development (React, Next.js), project management, team leadership, and I have unique experience transitioning from embedded systems to web development. I have CTO experience handling full product development and team coordination, plus leadership experience managing up to 6 developers on embedded projects.",
+    "current": "I'm currently a Senior Frontend Engineer working on subscriptions and consumer messaging for a major US food delivery platform with over 1 million users.",
+    "entrepreneurial": "I'm an entrepreneur with multiple projects: Previously CTO/Co-Founder of nugget.courses (educational platform, ended December 2023), and currently working on legalmanagement.ro (CTO & Co-Founder) and nutrichefdelivery.ro (Full-stack Developer & Business Partner, started December 2024).",
+    "cto": "I was CTO/Co-Founder of nugget.courses from February 2023 to December 2023 - this role has ended. I took over a WordPress MVP and rebuilt the entire platform from scratch using Next.js and Firebase. I was involved in every part of the product and coordinated development teams. I'm currently CTO/Co-Founder of legalmanagement.ro.",
+    "nugget": "nugget.courses was an educational platform where I served as CTO/Co-Founder from February 2023 to December 2023. I rebuilt the entire platform from a WordPress MVP to a modern Next.js + Firebase architecture.",
+    "react": "I have 4+ years of React.js experience, starting from my career transition in 2021. I've worked with React.js at Fortech (3 years), Real DREAMVILLE (freelance), and currently at the USA Food Delivery Platform. I'm also experienced with the React ecosystem including Next.js, Redux, TypeScript, and modern testing libraries like React Testing Library.",
+    "frontend": "I have 4+ years of frontend development experience specializing in React.js and Next.js. I've built features for 1M+ user platforms, worked on subscription systems, consumer messaging, and rebuilt entire platforms from scratch. My frontend skills include React.js, Next.js, TypeScript, Redux, HTML/CSS, and JavaScript."
+  }
+}
