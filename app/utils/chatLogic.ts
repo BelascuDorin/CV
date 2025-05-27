@@ -56,18 +56,33 @@ const data = experienceData as ExperienceData;
 export function processQuery(query: string): string {
   const lowerQuery = query.toLowerCase();
 
+  // React.js specific questions
+  if (
+    lowerQuery.includes("react") &&
+    (lowerQuery.includes("experience") ||
+      lowerQuery.includes("years") ||
+      lowerQuery.includes("how long"))
+  ) {
+    return data.responses.react;
+  }
+
+  // Frontend specific questions
+  if (
+    lowerQuery.includes("frontend") &&
+    (lowerQuery.includes("experience") ||
+      lowerQuery.includes("years") ||
+      lowerQuery.includes("how long"))
+  ) {
+    return data.responses.frontend;
+  }
+
   // Current role questions
   if (
     lowerQuery.includes("current") ||
     lowerQuery.includes("now") ||
     lowerQuery.includes("today")
   ) {
-    const current = data.experience.currentRole;
-    return `Currently, I'm a ${current.title} at ${
-      current.company
-    }, working as a ${current.type} since ${current.duration}. I focus on ${
-      current.focus
-    }, specifically ${current.responsibilities.join(", ").toLowerCase()}.`;
+    return `${data.responses.current} I'm also currently working on nutrichefdelivery.ro (Full-stack Developer & Business Partner, started December 2024) and legalmanagement.ro (CTO & Co-Founder).`;
   }
 
   // CTO/nugget.courses specific questions
@@ -76,18 +91,7 @@ export function processQuery(query: string): string {
     lowerQuery.includes("nugget") ||
     lowerQuery.includes("courses")
   ) {
-    const nugget = data.experience.entrepreneurialExperience.find(
-      (exp) => exp.name === "nugget.courses"
-    );
-    if (nugget) {
-      return `As ${nugget.role} of ${nugget.name} since ${nugget.duration}, I ${
-        nugget.description
-      }. My key responsibilities include: ${nugget.responsibilities?.join(
-        ", "
-      )}. I used ${nugget.technologies.join(
-        ", "
-      )} to rebuild the platform from scratch.`;
-    }
+    return data.responses.cto;
   }
 
   // Entrepreneurial/startup questions
@@ -97,10 +101,7 @@ export function processQuery(query: string): string {
     lowerQuery.includes("business") ||
     lowerQuery.includes("own company")
   ) {
-    const startups = data.experience.entrepreneurialExperience
-      .map((exp) => `${exp.name} (${exp.role}): ${exp.description}`)
-      .join("\n\n");
-    return `Yes, I'm an active entrepreneur! I've built multiple projects:\n\n${startups}\n\nThis gives me a unique perspective on both technical development and business needs, especially as a CTO where I handle full product development.`;
+    return data.responses.entrepreneurial;
   }
 
   // Technology-related questions
@@ -109,8 +110,43 @@ export function processQuery(query: string): string {
     lowerQuery.includes("tech") ||
     lowerQuery.includes("stack")
   ) {
-    const techs = data.experience.technologies.slice(0, 10).join(", ");
-    return `I work with modern web technologies including ${techs}. My main focus is React.js ecosystem for frontend, with experience in both large-scale applications (1M+ users) and entrepreneurial projects. As CTO of nugget.courses, I've worked extensively with Next.js and Firebase.`;
+    return data.responses.technologies;
+  }
+
+  // Skills questions
+  if (lowerQuery.includes("skill") || lowerQuery.includes("abilities")) {
+    return data.responses.skills;
+  }
+
+  // Experience/work questions
+  if (
+    lowerQuery.includes("experience") ||
+    lowerQuery.includes("work") ||
+    lowerQuery.includes("job")
+  ) {
+    return data.responses.experience;
+  }
+
+  // Project questions
+  if (
+    lowerQuery.includes("project") ||
+    lowerQuery.includes("built") ||
+    lowerQuery.includes("created")
+  ) {
+    return data.responses.projects;
+  }
+
+  // Motivation questions
+  if (
+    lowerQuery.includes("motivation") ||
+    lowerQuery.includes("motivated") ||
+    lowerQuery.includes("why") ||
+    (lowerQuery.includes("become") && lowerQuery.includes("developer")) ||
+    lowerQuery.includes("passion") ||
+    lowerQuery.includes("love") ||
+    (lowerQuery.includes("math") && lowerQuery.includes("problem"))
+  ) {
+    return data.responses.motivation;
   }
 
   // Firebase specific questions
@@ -123,30 +159,6 @@ export function processQuery(query: string): string {
     return `I have experience with WordPress from taking over the nugget.courses MVP. However, I rebuilt the entire platform from scratch using Next.js and Firebase to provide better performance, scalability, and user experience. This transition from WordPress to modern web technologies showcases my ability to modernize legacy systems.`;
   }
 
-  // Skills questions
-  if (lowerQuery.includes("skill") || lowerQuery.includes("abilities")) {
-    const skills = data.experience.skills;
-    return `My technical skills include:
-
-Frontend: ${skills.frontend.join(", ")}
-Backend: ${skills.backend.join(", ")}
-Tools: ${skills.tools.slice(0, 6).join(", ")}
-Methodologies: ${skills.methodologies.join(", ")}
-
-I also have unique embedded systems experience: ${skills.embedded.join(", ")}
-
-As a CTO, I handle full product development, team coordination, and technical decision-making.`;
-  }
-
-  // Experience/work questions
-  if (
-    lowerQuery.includes("experience") ||
-    lowerQuery.includes("work") ||
-    lowerQuery.includes("job")
-  ) {
-    return `I have ${data.experience.totalExperience} of software development experience. I've successfully transitioned from embedded automotive systems to modern web development, and now serve as CTO/Co-Founder of nugget.courses while also working as a Senior Frontend Engineer at a major US food delivery platform with 1M+ users.`;
-  }
-
   // Career transition questions
   if (
     lowerQuery.includes("transition") ||
@@ -154,22 +166,11 @@ As a CTO, I handle full product development, team coordination, and technical de
     lowerQuery.includes("automotive") ||
     lowerQuery.includes("embedded")
   ) {
+    if (lowerQuery.includes("automotive") || lowerQuery.includes("embedded")) {
+      return data.responses.automotive;
+    }
     const transition = data.experience.careerTransition;
-    return `I made a successful career transition from embedded C/automotive development to web development. During ${transition.period}, I dedicated myself to ${transition.description}. You can see my learning journey on GitHub: ${transition.github}. This transition gave me a unique perspective and strong problem-solving skills that I now apply as a CTO.`;
-  }
-
-  // Project questions
-  if (
-    lowerQuery.includes("project") ||
-    lowerQuery.includes("built") ||
-    lowerQuery.includes("created")
-  ) {
-    const startups = data.experience.entrepreneurialExperience
-      .map((exp) => exp.name)
-      .join(", ");
-    return `I'm working on subscription features for a 1M+ user food delivery platform, and as CTO/Co-Founder, I've rebuilt ${
-      startups.split(",")[0]
-    } from a WordPress MVP to a modern Next.js + Firebase platform. I've also built ${startups}. Additionally, I have experience with automotive headlamp systems and measurement instruments from my embedded background.`;
+    return `I made a successful career transition from embedded C/automotive development to web development. During ${transition.period}, I dedicated myself to ${transition.description}. You can see my learning journey on GitHub: ${transition.github}. This transition gave me a unique perspective and strong problem-solving skills that I now apply in my current roles.`;
   }
 
   // Leadership/management questions
@@ -179,14 +180,6 @@ As a CTO, I handle full product development, team coordination, and technical de
     lowerQuery.includes("team")
   ) {
     return `Yes, I have extensive leadership experience! As CTO/Co-Founder of nugget.courses, I lead technical development and coordinate development teams. Previously, I've been a Lead Application Developer managing a team of 6 developers, served as a Software Project Manager coordinating multiple teams, and worked as a Scrum Master. I also mentor team members and handle project planning.`;
-  }
-
-  // Specific technology questions
-  const mentionedTech = data.experience.technologies.find((tech) =>
-    lowerQuery.includes(tech.toLowerCase().replace(".js", ""))
-  );
-  if (mentionedTech) {
-    return `Yes, I have extensive experience with ${mentionedTech}! It's part of my regular tech stack. I use it in my current role at the food delivery platform and have used it across multiple projects including my entrepreneurial ventures. As CTO of nugget.courses, I've used it to rebuild our entire platform.`;
   }
 
   // Company-specific questions
@@ -199,5 +192,5 @@ As a CTO, I handle full product development, team coordination, and technical de
   }
 
   // Default response
-  return `I can help you learn about my professional journey! I'm a Senior Frontend Engineer with ${data.experience.totalExperience} of experience, including a successful transition from embedded systems to web development, and I'm also CTO/Co-Founder of nugget.courses. Ask me about my current roles, technologies, startups, career transition, or leadership experience!`;
+  return `I can help you learn about my professional journey! I'm a Senior Frontend Engineer with ${data.experience.totalExperience} of experience, including a successful transition from embedded systems to web development. I'm currently working on nutrichefdelivery.ro and legalmanagement.ro as an entrepreneur. Ask me about my current roles, technologies, startups, career transition, or leadership experience!`;
 }
